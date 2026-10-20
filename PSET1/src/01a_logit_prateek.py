@@ -151,3 +151,16 @@ iv2sls = IV2SLS.from_formula(
 ).fit(cov_type='robust')
 print(iv2sls.summary)
 
+
+
+## BLP
+
+np.random.seed(495794)
+
+#rng = np.random.default_rng()
+n_markets = df['market_ids'].nunique()
+k = 3 #3 product characteristic
+s = 500 #no. of indv per market
+nu = np.random.randn(n_markets, s, k)
+
+
